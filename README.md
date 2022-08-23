@@ -1,6 +1,2 @@
 # Our.Umbraco.TwoFactorAuth
-Two factor authentication Umbraco 9
-
-
-
-
+Two factor authentication Umbraco 10
