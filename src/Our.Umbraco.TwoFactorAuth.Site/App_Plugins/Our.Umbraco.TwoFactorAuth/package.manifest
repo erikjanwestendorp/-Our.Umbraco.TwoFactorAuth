@@ -1,0 +1,5 @@
+﻿{
+    "name": "Our.Umbraco.TwoFactorAuth",
+    "version": "",
+    "allowPackageTelemetry": true
+}
