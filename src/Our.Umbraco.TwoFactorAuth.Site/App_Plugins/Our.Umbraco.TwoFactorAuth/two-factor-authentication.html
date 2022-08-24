@@ -1,0 +1,85 @@
+﻿<div ng-controller="Our.Umbraco.TwoFactorAuth.AuthenticationController as vm">
+
+    <umb-editor-view ng-cloak>
+
+        <form name="vm.authForm" method="POST" ng-submit="vm.validateAndSave()">
+
+            <umb-editor-header name="vm.title" name-locked="true" hide-alias="true" hide-icon="true" hide-description="true">
+            </umb-editor-header>
+
+            <umb-editor-container>
+
+                <umb-box>
+                    <umb-box-content>
+                        <ol class="list">
+                            <li>
+                                <p>
+                                    <localize key="twoFactorAuth_stepOne">
+                                        Download a two-factor authenticator app like Microsoft Authenticator for
+                                        <a href="https://go.microsoft.com/fwlink/?Linkid=825071" class="underline">Windows Phone</a>,
+                                        <a href="https://go.microsoft.com/fwlink/?Linkid=825072" class="underline">Android</a> and
+                                        <a href="https://go.microsoft.com/fwlink/?Linkid=825073" class="underline">iOS</a> or
+                                        Google Authenticator for
+                                        <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en" class="underline">Android</a> and
+                                        <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" class="underline">iOS</a>.
+                                    </localize>
+                                </p>
+                            </li>
+                            <li>
+
+                                <p><localize key="twoFactorAuth_stepTwo">Scan the QR Code from your two-factor authenticator app.</localize></p>
+                                <div id="qrcode" style="background-color: white;"></div><br />
+                                <div class="control-group text-center">
+                                    <img alt="QR code for Two Factor Authenticator" ng-src="{{vm.qrCodeImageUrl}}" ng-if="vm.qrCodeImageUrl" />
+                                </div>
+
+                            </li>
+                            <li>
+                                <p>
+                                    <localize key="twoFactorAuth_stepThree">
+                                        Once you have scanned the QR, your two factor authentication app will provide you
+                                        with a unique code. Enter the code in the confirmation box below.
+                                    </localize>
+                                </p>
+                                <umb-control-group label-for="token" alias="2facode">
+
+                                    <input umb-auto-focus id="2facode" class="-full-width-input input-xlarge" type="text" name="token"
+                                           inputmode="numeric" autocomplete="one-time-code" ng-model="vm.code" localize="placeholder"
+                                           placeholder="@login_2faCodeInputHelp" aria-required="true" required />
+
+                                    <div ng-messages="vm.authForm.token.$error" role="alert">
+                                        <span class="umb-validation-label" ng-message="token">
+                                            <localize key="login_2faInvalidCode">Invalid code entered</localize>
+                                        </span>
+                                    </div>
+
+                                </umb-control-group>
+
+                            </li>
+                        </ol>
+                    </umb-box-content>
+
+                </umb-box>
+
+            </umb-editor-container>
+
+            <umb-editor-footer>
+
+                <umb-editor-footer-content-right>
+
+                    <umb-button type="button" button-style="link" label-key="general_close" shortcut="esc" action="vm.close()">
+                    </umb-button>
+
+                    <umb-button state="vm.buttonState" button-style="success" label-key="buttons_save" type="submit"
+                                disabled="vm.code.length === 0">
+                    </umb-button>
+
+                </umb-editor-footer-content-right>
+
+            </umb-editor-footer>
+
+        </form>
+
+    </umb-editor-view>
+
+</div>

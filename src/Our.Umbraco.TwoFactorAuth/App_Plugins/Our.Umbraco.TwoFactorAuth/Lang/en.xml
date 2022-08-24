@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="nl" intName="Dutch" localName="Nederlands" lcid="19" culture="nl-NL">
+	<area alias="login">
+		<key alias="2faSetupTitle">Setup information</key>
+	</area>
+	<area alias="twoFactorAuth">
+		<key alias="title">Two-factor Authentication</key>
+		<key alias="description">To use an authenticator app go through the following steps:</key>
+		<key alias="stepOne">
+			<![CDATA[
+		Download a two-factor authenticator app like Microsoft Authenticator for
+                        <a href="https://go.microsoft.com/fwlink/?Linkid=825071">Windows Phone</a>,
+                        <a href="https://go.microsoft.com/fwlink/?Linkid=825072">Android</a> and
+                        <a href="https://go.microsoft.com/fwlink/?Linkid=825073">iOS</a> or
+                        Google Authenticator for
+                        <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en">Android</a> and
+                        <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">iOS</a>.
+		]]>
+		</key>
+		<key alias="stepTwo">Scan the QR Code from your two-factor authenticator app.</key>
+		<key alias="stepThree">
+			Once you have scanned the QR, your two factor authentication app will provide you
+			with a unique code. Enter the code in the confirmation box below.
+		</key>
+	</area>
+</language>

@@ -1,5 +1,8 @@
 ﻿{
-    "name": "Our.Umbraco.TwoFactorAuth",
-    "version": "",
-    "allowPackageTelemetry": true
+  "name": "Our.Umbraco.TwoFactorAuth",
+  "version": "1.0.0",
+  "allowPackageTelemetry": true,
+  "javascript": [
+    "~/App_Plugins/Our.Umbraco.TwoFactorAuth/two-factor-authentication.controller.js"
+  ]
 }
