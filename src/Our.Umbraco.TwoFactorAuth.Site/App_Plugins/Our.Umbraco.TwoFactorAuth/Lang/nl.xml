@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="nl" intName="Dutch" localName="Nederlands" lcid="19" culture="nl-NL">
+	<area alias="login">
+		<key alias="mfaSecurityCodeSubject">Umbraco: Beveiligingscode</key>
+		<key alias="mfaSecurityCodeMessage">Jouw beveiligingscode is: %0%</key>
+		<key alias="2faTitle">Laatste stap</key>
+		<key alias="2faText">Je hebt tweestapsverificatie ingeschakeld en moet je identiteit verifiëren.</key>
+		<key alias="2faMultipleText">Kies een tweestapsverificatie aanbieder</key>
+		<key alias="2faCodeInput">Verificatiecode</key>
+		<key alias="2faCodeInputHelp">Vul de verificatiecode in</key>
+		<key alias="2faInvalidCode">Ongeldige code ingevoerd</key>
+		<key alias="2faSetupTitle">Configureer</key>
+	</area>
+	<area alias="user">
+		<key alias="configureTwoFactor">Configureer tweestapsverificatie</key>
+	</area>
+	<area alias="twoFactorAuth">
+		<key alias="title">Tweestapsverificatie</key>
+		<key alias="description">Doorloop onderstaande stappen om tweestapsverificatie aan te zetten:</key>
+		<key alias="stepOne">
+			<![CDATA[
+		Download een app voor tweestapsverificatie, bijvoorbeelde de Microsoft Authenticator voor
+                        <a href="https://go.microsoft.com/fwlink/?Linkid=825071">Windows Phone</a>,
+                        <a href="https://go.microsoft.com/fwlink/?Linkid=825072">Android</a> en
+                        <a href="https://go.microsoft.com/fwlink/?Linkid=825073">iOS</a> of
+                        Google Authenticator voor
+                        <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en">Android</a> en
+                        <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">iOS</a>.
+		]]>
+		</key>
+		<key alias="stepTwo">Scan de QR-code vanuit uw tweestapsverificatie-app.</key>
+		<key alias="stepThree">
+			Zodra je de QR gescand hebt, zal de tweestapsverificatie-app je
+			voorzien van een unieke code. Voer hieronder de code in.
+		</key>
+	</area>
+</language>

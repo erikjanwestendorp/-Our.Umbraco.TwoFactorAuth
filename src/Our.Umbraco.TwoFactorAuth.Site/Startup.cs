@@ -1,3 +1,5 @@
+using Our.Umbraco.TwoFactorAuth.Compose;
+
 namespace Our.Umbraco.TwoFactorAuth.Site
 {
     public class Startup
@@ -33,6 +35,7 @@ namespace Our.Umbraco.TwoFactorAuth.Site
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
+                .ConfigureTwoFactorAuth()
                 .Build();
         }
 
