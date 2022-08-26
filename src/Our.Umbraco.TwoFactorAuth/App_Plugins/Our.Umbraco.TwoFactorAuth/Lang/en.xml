@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<language alias="nl" intName="Dutch" localName="Nederlands" lcid="19" culture="nl-NL">
+<language alias="en" intName="English (UK)" localName="English (UK)" lcid="" culture="en-GB">
 	<area alias="login">
 		<key alias="2faSetupTitle">Setup information</key>
 	</area>
