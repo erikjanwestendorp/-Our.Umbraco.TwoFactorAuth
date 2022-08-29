@@ -1,6 +1,7 @@
 ﻿using Google.Authenticator;
 using Microsoft.Extensions.DependencyInjection;
 using Our.Umbraco.TwoFactorAuth.Authentication;
+using Our.Umbraco.TwoFactorAuth.Options;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Security;
 using Umbraco.Cms.Web.BackOffice.Security;
@@ -21,6 +22,8 @@ public static class UmbracoBuilderExtensions
         {
             options.SetupViewPath = Constants.Authentication.SetupViewPath;
         });
+
+        builder.Services.AddOptions<TwoFactorAuthSettings>().Bind(builder.Config.GetSection(Constants.Configuration.TwoFactorAuth));
 
         return builder;
     }

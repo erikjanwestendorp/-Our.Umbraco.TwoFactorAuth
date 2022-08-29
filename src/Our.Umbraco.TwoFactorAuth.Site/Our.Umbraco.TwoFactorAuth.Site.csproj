@@ -26,7 +26,6 @@
     <RazorCompileOnPublish>false</RazorCompileOnPublish>
   </PropertyGroup>
 
-  <Import Project="..\Our.Umbraco.TwoFactorAuth\build\Our.Umbraco.TwoFactorAuth.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Our.Umbraco.TwoFactorAuth\Our.Umbraco.TwoFactorAuth.csproj" />
   </ItemGroup>
