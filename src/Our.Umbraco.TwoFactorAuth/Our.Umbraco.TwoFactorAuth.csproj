@@ -16,20 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="App_Plugins\Our.Umbraco.TwoFactorAuth\**">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-    </Content>
-    <None Include="build\**">
-      <Pack>true</Pack>
-      <PackagePath>buildTransitive</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="App_Plugins\Our.Umbraco.TwoFactorAuth\Lang\en.xml" />
-    <None Remove="App_Plugins\Our.Umbraco.TwoFactorAuth\Lang\nl.xml" />
-    <None Remove="App_Plugins\Our.Umbraco.TwoFactorAuth\two-factor-authentication.controller.js" />
-    <None Remove="App_Plugins\Our.Umbraco.TwoFactorAuth\two-factor-authentication.html" />
+    <ProjectReference Include="..\Our.Umbraco.TwoFactorAuth.Assets\Our.Umbraco.TwoFactorAuth.Assets.csproj" />
   </ItemGroup>
 </Project>
