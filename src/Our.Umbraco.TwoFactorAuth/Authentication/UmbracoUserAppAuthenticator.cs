@@ -37,7 +37,7 @@ internal class UmbracoUserAppAuthenticator : ITwoFactorProvider
 
         var issuer = Constants.Application.Name.ConcatWithSeparator(" - ", environmentName);
 
-        var setupInfo = _twoFactorAuthenticator.GenerateSetupCode(issuer, user.Username, secret, false);
+        var setupInfo = _twoFactorAuthenticator.GenerateSetupCode(issuer, user?.Username, secret, false);
         return Task.FromResult<object>(new TwoFactorAuthInfo
         {
             QrCodeSetupImageUrl = setupInfo.QrCodeSetupImageUrl,
