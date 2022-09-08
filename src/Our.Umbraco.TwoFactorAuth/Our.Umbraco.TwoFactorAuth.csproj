@@ -5,8 +5,9 @@
     <Product>Our.Umbraco.TwoFactorAuth</Product>
     <PackageId>Our.Umbraco.TwoFactorAuth</PackageId>
     <Title>Our.Umbraco.TwoFactorAuth</Title>
-    <Description>...</Description>
+    <Description>Two factor authentication for Umbraco Backoffice users</Description>
     <PackageTags>umbraco plugin package</PackageTags>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
