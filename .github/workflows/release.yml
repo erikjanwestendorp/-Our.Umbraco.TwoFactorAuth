@@ -18,8 +18,14 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
-    - name: Pack
-      run: dotnet pack src\\Our.Umbraco.TwoFactorAuth\\Our.Umbraco.TwoFactorAuth.csproj -c Release
+    - name: Pack TwoFactorAuth
+      run: dotnet pack src\\Our.Umbraco.TwoFactorAuth\\Our.Umbraco.TwoFactorAuth.csproj -c Release dotnet pack src\\Our.Umbraco.TwoFactorAuth\\Our.Umbraco.TwoFactorAuth.csproj -c Release
+    
+    - name: Pack TwoFactorAuth Assets
+      run: dotnet pack src\\Our.Umbraco.TwoFactorAuth.Assets\\Our.Umbraco.TwoFactorAuth.Assets.csproj -c Release dotnet pack src\\Our.Umbraco.TwoFactorAuth.Assets\\Our.Umbraco.TwoFactorAuth.Assets.csproj -c Release
       
-    - name: Publish to GitHub packages 
-      run: dotnet nuget push /home/runner/work/Our.Umbraco.TwoFactorAuth/Our.Umbraco.TwoFactorAuth/src/Our.Umbraco.TwoFactorAuth/bin/Release/Our.Umbraco.TwoFactorAuth.1.0.1.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+    - name: Publish TwoFactorAuth
+      run: dotnet nuget push /home/runner/work/Our.Umbraco.TwoFactorAuth/Our.Umbraco.TwoFactorAuth/src/Our.Umbraco.TwoFactorAuth/bin/Release/Our.Umbraco.TwoFactorAuth.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+
+    - name: Publish TwoFactorAuth Assets
+      run: dotnet nuget push /home/runner/work/Our.Umbraco.TwoFactorAuth.Assets/Our.Umbraco.TwoFactorAuth.Assets/src/Our.Umbraco.TwoFactorAuth.Assets/bin/Release/Our.Umbraco.TwoFactorAuth.Assets.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
