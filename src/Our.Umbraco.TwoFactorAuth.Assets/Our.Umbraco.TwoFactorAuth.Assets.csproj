@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-	<StaticWebAssetBasePath>App_Plugins/Our.Umbraco.TwoFactorAuth</StaticWebAssetBasePath>
+    <StaticWebAssetBasePath>App_Plugins/Our.Umbraco.TwoFactorAuth</StaticWebAssetBasePath>
     <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>enable</ImplicitUsings> 
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
 
