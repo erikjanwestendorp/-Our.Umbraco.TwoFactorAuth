@@ -28,4 +28,4 @@ jobs:
       run: dotnet nuget push /home/runner/work/Our.Umbraco.TwoFactorAuth/Our.Umbraco.TwoFactorAuth/src/Our.Umbraco.TwoFactorAuth/bin/Release/Our.Umbraco.TwoFactorAuth.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 
     - name: Publish TwoFactorAuth Assets
-      run: dotnet nuget push /home/runner/work/Our.Umbraco.TwoFactorAuth.Assets/Our.Umbraco.TwoFactorAuth.Assets/src/Our.Umbraco.TwoFactorAuth.Assets/bin/Release/Our.Umbraco.TwoFactorAuth.Assets.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push /home/runner/work/Our.Umbraco.TwoFactorAuth/Our.Umbraco.TwoFactorAuth/src/Our.Umbraco.TwoFactorAuth.Assets/bin/Release/Our.Umbraco.TwoFactorAuth.Assets.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
