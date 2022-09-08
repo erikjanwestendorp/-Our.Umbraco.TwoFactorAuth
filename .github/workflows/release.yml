@@ -8,38 +8,15 @@ on:
 jobs:
   publish:
     name: build, pack & publish
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps: 
-    - uses: actions/checkout@v2
-    
-    - name: Setup .NET
+    - name: Check out Repo
+      uses: actions/checkout@v2
+
+    - name: Setup dotnet
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-        
-    - name: Restore dependencies
-      working-directory: ./src
-      run: dotnet restore
-      
-    - name: Build
-      working-directory: ./src
-      run: dotnet build --configuration Release --no-restore
-      
-    - name: Publish on version change
-      id: publish_nuget
-      uses: rohith/publish-nuget@v2
-      with:
-          # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: /src/Our.Umbraco.TwoFactorAuth/Our.Umbraco.TwoFactorAuth.csproj
-          
-          # Regex pattern to extract version info in a capturing group
-          #VERSION_REGEX: ^\s*<PackageVersion>(.*)<\/PackageVersion>\s*$
-          
-          # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
-          VERSION_STATIC: 1.0.0-alpha01
-          
-          # API key to authenticate with NuGet server
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          
-          # Flag to toggle pushing symbols along with nuget package to the server, disabled by default
-          INCLUDE_SYMBOLS: false
+
+    - name: Pack
+      run: dotnet pack src\\Our.Umbraco.TwoFactorAuth\\Our.Umbraco.TwoFactorAuth/.csproj -c Release
