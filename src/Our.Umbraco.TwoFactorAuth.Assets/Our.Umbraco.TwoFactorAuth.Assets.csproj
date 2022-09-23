@@ -5,7 +5,7 @@
     <StaticWebAssetBasePath>App_Plugins/Our.Umbraco.TwoFactorAuth</StaticWebAssetBasePath>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings> 
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>10.0.0-alpha</PackageVersion>
   </PropertyGroup>
 
 
